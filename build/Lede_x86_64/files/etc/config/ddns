@@ -1,0 +1,16 @@
+
+config ddns 'global'
+	option ddns_dateformat '%F %R'
+	option ddns_loglines '250'
+	option upd_privateip '0'
+
+config service 'ali'
+	option use_ipv6 '1'
+	option service_name 'aliyun.com'
+	option enabled '1'
+	option username 'LTAI4GKb3bP5fieUkcy64PpT'
+	option password 'o8QHUtrSDzPhsb53HR3z4edmGXodoj'
+	option lookup_host 'housoul.top'
+	option domain 'openwrt.housoul.top'
+	option ip_source 'web'
+	option interface 'lan6'
