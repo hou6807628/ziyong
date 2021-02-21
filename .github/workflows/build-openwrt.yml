@@ -166,7 +166,7 @@ jobs:
         make && sudo make install
         popd
  
-    - name: SSH远程连接（若打开了此功能,在此转圈2分钟还展开不了,请看《SSH连接教程》）
+    - name: SSH远程连接
       uses: 281677160/debugger-action@master
       if: env.SSH_ACTIONS == 'true' || (github.event.inputs.ssh == 'ssh' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       env:
@@ -307,25 +307,4 @@ jobs:
             🌴 链接有效期为7天，无需注册直接下载 🐤
         files: ${{ env.FIRMWARE }}/*
     
-    - name: 微信通知
-      uses: emon100/Action-Serverchan@v2
-      if: steps.organizer.outputs.status == 'success' && env.SERVERCHAN_SCKEY == 'true' || (github.event.inputs.wxtz == 'wxtz' && github.event.inputs.wxtz  != 'false')
-      with:
-        SCKEY: ${{ secrets.SCKEY }}
-        text: 恭喜主人${{ env.WXFB_MESSAGE }}固件编译成功！
-        desp: 我亲爱的主人您要编译的[ ${{ env.NAME2 }}${{ env.NAME1 }} ]固件顺利编译完成了！
-              
-              
-              完成时间：${{ env.date1 }}
-              
-              
-              发布地址：${{ env.GITHUB_RELEASE }}
-              
-              
-              奶牛快传：${{ env.COWTRANSFER_URL }}
-              
-              
-              WeTransfer：${{ env.WETRANSFER_URL }}
-              
-              
-              祝小主人见人爱，花见花开，车见车载，天天好心情🎈！！！
+    
