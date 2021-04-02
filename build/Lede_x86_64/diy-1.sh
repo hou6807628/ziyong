@@ -15,7 +15,7 @@ git clone https://github.com/garypang13/luci-app-bypass
 git clone https://github.com/fw876/helloworld package/luci-app-ssr-plus
 git clone https://github.com/vernesong/OpenClash package/luci-app-openclash
 git clone https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
-src-git diy https://github.com/firker/diy-ziyong
-src-git jerryk https://github.com/jerrykuku/openwrt-package
+git clone https://github.com/firker/diy-ziyong
+git clone https://github.com/jerrykuku/openwrt-package
 
 
